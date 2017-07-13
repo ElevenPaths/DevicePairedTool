@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSPairingDetectorProvider", "iOSPairingDetectorProvider\iOSPairingDetectorProvider.csproj", "{CD3EB18C-20EC-4323-AC01-1DE1407B565A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iDevicePairingConsole", "iOSPairingDetectorConsole\iOSPairingDetectorConsole.csproj", "{686DDD05-256D-4F7E-8184-0734E274A10C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iDeviePairedGUI", "iOSPairingDetectorGUI\iOSPairingDetectorGUI.csproj", "{1D9B03E2-1D21-4055-909A-A6906F2B0088}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD3EB18C-20EC-4323-AC01-1DE1407B565A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3EB18C-20EC-4323-AC01-1DE1407B565A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3EB18C-20EC-4323-AC01-1DE1407B565A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3EB18C-20EC-4323-AC01-1DE1407B565A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686DDD05-256D-4F7E-8184-0734E274A10C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686DDD05-256D-4F7E-8184-0734E274A10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686DDD05-256D-4F7E-8184-0734E274A10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{686DDD05-256D-4F7E-8184-0734E274A10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9B03E2-1D21-4055-909A-A6906F2B0088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9B03E2-1D21-4055-909A-A6906F2B0088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9B03E2-1D21-4055-909A-A6906F2B0088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9B03E2-1D21-4055-909A-A6906F2B0088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

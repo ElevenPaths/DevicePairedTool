@@ -1,0 +1,81 @@
+﻿<mui:ModernWindow x:Class="iOSPairingDetectorGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iOSPairingDetectorGUI"
+           xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="Device Paired"
+        Style="{StaticResource BlankWindow}"
+        Height="350" Width="852">
+    <mui:ModernWindow.Resources>
+        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Background" Value="#734ddd"></Setter>
+        </Style>
+        <Style TargetType="DataGridColumnHeader"  BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+        </Style>
+    </mui:ModernWindow.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0" Margin="0,-10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="\Images\app_icon.png" Stretch="None" HorizontalAlignment="Left"></Image>
+            <Label Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" >iDevices connected to this computer (Trusted files)</Label>
+        </Grid>
+
+        <DataGrid AutoGenerateColumns="False" HeadersVisibility="Column" Grid.Row="1" ItemsSource="{Binding}"
+                  x:Name="dtgDevices" IsReadOnly="True" BorderBrush="#666666" BorderThickness="2"
+                  Margin="0,10,0,0" CanUserReorderColumns="False" CanUserSortColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Device UDID" Binding="{Binding UDID}"  Width="SizeToCells"/>
+                <DataGridTextColumn Header="Wifi MAC" Binding="{Binding WiFiMACAddress}" Width="SizeToCells"/>
+                <DataGridTextColumn Header="Bluetooth MAC" Binding="{Binding BlueToothMACddress}"  Width="SizeToCells"/>
+                <DataGridTextColumn Header="Host Id" Binding="{Binding HostId}"  Width="SizeToCells"/>
+                <DataGridTemplateColumn Header="Remove">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Cursor="Hand" Background="Transparent" BorderThickness="0" Click="Button_Click">
+                                <Image Source="\Images\remove.png" Stretch="None"></Image>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10">
+            <Button Margin="0,0,10,0" x:Name="refreshButton" Click="refreshButton_Click" >Refresh</Button>
+            <Button Margin="0" x:Name="closeButton" Click="closeButton_Click">Close</Button>
+        </StackPanel>
+        <Grid Grid.Row="3" Margin="0,20,0,0" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock  HorizontalAlignment="Left" Grid.Column="0">
+                    <Hyperlink NavigateUri="https://www.elevenpaths.com" TextDecorations="{x:Null}" RequestNavigate="Hyperlink_RequestNavigate">
+                           <StackPanel  Orientation="Horizontal">
+                                <Image Stretch="None" Source="\Images\logo_11p.png"/>
+                                <Image Margin="5,0,0,0" Stretch="None"  Source="\Images\hyperlink.png"/>
+                           </StackPanel>
+                    </Hyperlink>
+            </TextBlock>
+            <Label Grid.Column="1" HorizontalAlignment="Center" Foreground="#777777">2017 ©  Telefónica Digital España,  S.L.U. All Rights Reserved.</Label>
+            <Image Grid.Column="2" Stretch="None" HorizontalAlignment="Right" Source="\Images\endorso.png"></Image>
+        </Grid>
+    </Grid>
+</mui:ModernWindow>
