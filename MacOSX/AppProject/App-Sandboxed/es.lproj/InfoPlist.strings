@@ -1,0 +1,7 @@
+/*
+ <codex>
+ <abstract>Localized strings for the "Info.plist" file.</abstract>
+ </codex>
+ */
+
+"NSHumanReadableCopyright" = "Copyright © 2017 Telefónica Digital";
