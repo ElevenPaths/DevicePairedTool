@@ -1,0 +1,14 @@
+/*
+ <codex>
+ <abstract>Localized strings for the stuff in "Common.m".</abstract>
+ </codex>
+ */
+
+/* prompt shown when user is required to authorize to read the devices paired */
+"IDevicePairedTool_read_paired_devices" = "iDeviceParedTool is trying to read paired devices.";
+
+/* prompt shown when user is required to authorize to delete paired file */
+"IDevicePairedTool_remove_paired_file" = "iDevicePairedTool is trying delete paired file.";
+
+/* prompt shown when user is required to authorize check device paired file */
+"IDevicePairedTool_check_paired_file" = "iDevicePairedTool is trying to check paired file.";
